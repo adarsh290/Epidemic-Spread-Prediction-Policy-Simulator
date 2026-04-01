@@ -1,0 +1,22 @@
+# Raw & Intermediate Data (Exceeds GitHub size limits)
+google_raw.csv
+master_merged_data.csv
+owid_raw.csv
+jhu_cleaned.csv
+
+# Security & Credentials
+ngrok_recovery_codes.txt
+
+# Junk & Logs
+logs.txt
+
+# Node/Javascript artifacts from localtunnel
+node_modules/
+package.json
+package-lock.json
+
+# Python environments & caches
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
