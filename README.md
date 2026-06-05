@@ -31,16 +31,39 @@ To translate these findings into actionable public health tools, we developed an
 
 Built with Streamlit and Plotly, the dashboard allows policymakers to simulate behavioral interventions (e.g., forcing a 50% drop in transit mobility while maintaining 80% vaccination rates) and instantly visualize the predicted shift in regional hotspot probability 14 days into the future on a global choropleth map.
 
-## 6. How to Run the Simulator Locally
-To launch the interactive dashboard on your local machine:
+## 6. Project Structure & Engineering
+This project has been refactored from a research prototype into a modular, production-ready application.
 
+*   `app.py`: Streamlit-based user interface.
+*   `model_engine.py`: Core prediction logic and resource management (loads model/data).
+*   `data_pipeline.py`: CLI-ready script to reproduce the entire data lifecycle (download → merge → feature engineering → training → SHAP).
+*   `tests/`: Unit tests for verifying core prediction logic.
+*   `.github/workflows/`: Automated CI for linting and testing on every push.
+
+## 7. How to Run & Develop
+
+### Local Installation
 ```bash
 # Clone the repository
 git clone https://github.com/adarsh290/CodeCure-Track-C-Epidemic-Spread-Prediction-Policy-Simulator.git
 cd CodeCure-Track-C-Epidemic-Spread-Prediction-Policy-Simulator
 
-# Install the required dependencies
+# Install dependencies
 pip install -r requirements.txt
+```
 
-# Run the Streamlit application
+### Running the Simulator
+```bash
 streamlit run app.py
+```
+
+### Running Tests
+```bash
+pytest
+```
+
+### Running the Data Pipeline
+To refresh the data and retrain the model, edit the `__main__` section in `data_pipeline.py` and run:
+```bash
+python data_pipeline.py
+```

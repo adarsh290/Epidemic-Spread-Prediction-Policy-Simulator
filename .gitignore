@@ -9,6 +9,7 @@ ngrok_recovery_codes.txt
 
 # Junk & Logs
 logs.txt
+*.log
 
 # Node/Javascript artifacts from localtunnel
 node_modules/
@@ -20,3 +21,12 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 venv/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

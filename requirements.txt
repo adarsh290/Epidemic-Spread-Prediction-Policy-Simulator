@@ -4,3 +4,5 @@ xgboost
 shap
 streamlit
 plotly
+pytest
+black
